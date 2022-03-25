@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jacob.bluetoothtest.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/targets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/feildone"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="389dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="362dp"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="119dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/farShotNine"
+                    android:layout_width="195dp"
+                    android:layout_height="162dp"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/redClimb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/farShotOne"
+                    android:layout_width="341dp"
+                    android:layout_height="93dp"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="277dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/farShotTwo"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/tarMacShotOne"
+                    android:layout_width="192dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/farShotThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/farShotFour"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/tarMacShotTwo"
+                    android:layout_width="54dp"
+                    android:layout_height="168dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/closeShot"
+                    android:layout_width="141dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/tarMacShotThree"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/farShotFive"
+                    android:layout_width="72dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/farShotSix"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/tarMacShotFour"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/farShotSeven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="201dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/farShotEight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="141dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/blueClimb"
+                    android:layout_width="223dp"
+                    android:layout_height="144dp"
+                    android:alpha="0"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/farShotTen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="141dp"
+                    android:layout_weight="1"
+                    android:alpha="0"
+                    android:text="Button" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/shelfButton"
+        android:layout_width="67dp"
+        android:layout_height="43dp"
+        android:background="@color/shelfColor"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toEndOf="@id/modeShelf"
+        app:srcCompat="@drawable/ic_threelines"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <LinearLayout
+        android:id="@+id/modeShelf"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/shelfColor"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/gameMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonSelectedColor"
+                android:enabled="false"
+                android:text="Auto"
+                android:textColor="@color/blueTeam" />
+
+            <Button
+                android:id="@+id/teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonNotSelectedColor"
+                android:text="Teleop"
+                android:textColor="@color/redTeam" />
+
+            <Button
+                android:id="@+id/endgame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonNotSelectedColor"
+                android:text="Endgame"
+                android:textColor="@color/greenColor" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/autoLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textOff="No Cross Auto Line"
+            android:textOn="Crossed Auto Line" />
+
+        <LinearLayout
+            android:id="@+id/defenceMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/offence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonSelectedColor"
+                android:text="Offence"
+                android:textColor="@color/redTeam" />
+
+            <Button
+                android:id="@+id/defence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonNotSelectedColor"
+                android:text="Defence"
+                android:textColor="@color/greenColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/defenceType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/defending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonSelectedColor"
+                android:text="Defending"
+                android:textColor="@color/greenColor" />
+
+            <Button
+                android:id="@+id/idle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/buttonNotSelectedColor"
+                android:text="Idle"
+                android:textColor="@color/blueTeam" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/toggleMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Match" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Send" />
+
+            <Button
+                android:id="@+id/newForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Load" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/teamInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red - 1"
+            android:textColor="@color/redTeam" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
