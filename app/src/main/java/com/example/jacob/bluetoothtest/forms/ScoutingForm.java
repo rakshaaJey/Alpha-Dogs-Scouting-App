@@ -2,6 +2,7 @@ package com.example.jacob.bluetoothtest.forms;
 
 import com.example.jacob.bluetoothtest.Constants;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ScoutingForm {
@@ -25,6 +26,8 @@ public class ScoutingForm {
     public TimePeriod climbPeriod = new TimePeriod();
     public ArrayList<TimePeriod> defenceTimes = new ArrayList<TimePeriod>();
     public ArrayList<TimePeriod> activeDefenceTimes = new ArrayList<TimePeriod>();
+
+    public String defendedTeams;
 
     public double defenceTime = 0;
     public double activeDefenceTime = 0;
@@ -91,6 +94,7 @@ public class ScoutingForm {
                 + protectedZoneBallsShot + ","
                 + activeDefenceTime + ","
                 + defenceTime + ","
+                + defendedTeams + ","
                 + climbTime + ","
                 + rungLevel;
     }
@@ -110,18 +114,19 @@ public class ScoutingForm {
         ret.autoBallsShot = Integer.parseInt(arr[6]);
         ret.tarMacBalls = Integer.parseInt(arr[7]);
         ret.tarMacBallsShot = Integer.parseInt(arr[8]);
-        ret.farBalls = Integer.parseInt(arr[8]);
-        ret.farBallsShot = Integer.parseInt(arr[8]);
-        ret. tarMacBalls = Integer.parseInt(arr[8]);
-        ret.tarMacBallsShot = Integer.parseInt(arr[8]);
-        ret.closeBalls = Integer.parseInt(arr[8]);
-        ret.closeBallsShot = Integer.parseInt(arr[8]);
-        ret.protectedZoneBalls = Integer.parseInt(arr[8]);
-        ret.protectedZoneBallsShot = Integer.parseInt(arr[8]);
-        ret.activeDefenceTime = Double.parseDouble(arr[13]);
-        ret.defenceTime = Double.parseDouble(arr[14]);
-        ret.climbTime = Double.parseDouble(arr[15]);
-        ret.climb = Constants.Climb.fromString(arr[16]);
+        ret.farBalls = Integer.parseInt(arr[9]);
+        ret.farBallsShot = Integer.parseInt(arr[10]);
+        ret. tarMacBalls = Integer.parseInt(arr[11]);
+        ret.tarMacBallsShot = Integer.parseInt(arr[12]);
+        ret.closeBalls = Integer.parseInt(arr[13]);
+        ret.closeBallsShot = Integer.parseInt(arr[14]);
+        ret.protectedZoneBalls = Integer.parseInt(arr[15]);
+        ret.protectedZoneBallsShot = Integer.parseInt(arr[16]);
+        ret.activeDefenceTime = Double.parseDouble(arr[17]);
+        ret.defenceTime = Double.parseDouble(arr[18]);
+        ret.defendedTeams = arr[19];
+        ret.climbTime = Double.parseDouble(arr[20]);
+        ret.climb = Constants.Climb.fromString(arr[21]);
 
         ret.matchStarted = true;
         ret.matchOver = true;

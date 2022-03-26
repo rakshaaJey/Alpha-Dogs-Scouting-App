@@ -142,10 +142,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if (m_currentForm.currentMode == Constants.GameMode.ENDGAME && m_currentForm.team == Constants.Team.BLUE ) {
-                        showClimbAlert();
-                    } else {
-                        showProtectedZoneAlert();
+                    if (m_currentForm.team == Constants.Team.BLUE) {
+                        if(m_currentForm.currentMode == Constants.GameMode.ENDGAME ){
+                            showClimbAlert();
+                        } else {
+                            showProtectedZoneAlert();
+                        }
                     }
                 }
             }
@@ -155,10 +157,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if (m_currentForm.currentMode == Constants.GameMode.ENDGAME && m_currentForm.team == Constants.Team.RED) {
-                        showClimbAlert();
-                    } else {
-                        showProtectedZoneAlert();
+                    if (m_currentForm.team == Constants.Team.RED) {
+                        if(m_currentForm.currentMode == Constants.GameMode.ENDGAME ){
+                                showClimbAlert();
+                        } else {
+                            showProtectedZoneAlert();
+                        }
                     }
                 }
             }
@@ -168,7 +172,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                   showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -177,7 +185,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -186,7 +198,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -195,7 +211,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -204,7 +224,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -213,7 +237,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -222,7 +250,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -231,7 +263,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -249,7 +285,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -258,7 +298,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showTarMacAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showTarMacAlert();
+                    }
                 }
             }
         });
@@ -267,7 +311,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showTarMacAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showTarMacAlert();
+                    }
                 }
             }
         });
@@ -276,7 +324,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showTarMacAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showTarMacAlert();
+                    }
                 }
             }
         });
@@ -285,7 +337,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showTarMacAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showTarMacAlert();
+                    }
                 }
             }
         });
@@ -294,7 +350,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showCloseAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showCloseAlert();
+                    }
                 }
             }
         });
@@ -1006,6 +1066,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        builder.setView(layout);
+
+        builder.setPositiveButton(R.string.affirm, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    void showDefenceAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setCancelable(true);
+
+        LayoutInflater inflater = getLayoutInflater();
+
+        View layout = inflater.inflate(R.layout.dialog_defence, null);
+
+        //setup
+
+        final EditText defendedTeam = layout.findViewById(R.id.defendedAgainst);
+
+        try {
+            m_currentForm.defendedTeams += (defendedTeam.toString() + ", ");
+        } catch (NumberFormatException e) {
+
+        }
         builder.setView(layout);
 
         builder.setPositiveButton(R.string.affirm, new DialogInterface.OnClickListener() {
