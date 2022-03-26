@@ -47,7 +47,7 @@ public class SendMessageActivity extends AppCompatActivity {
     private OutputStream outputStream; //Stream data is written to
     private InputStream inStream; //Stream data is read from, currently unused
 
-    String computerAddress = "3C:F8:62:C5:8D:C4"; //"00:C2:C6:C4:71:C3" //3C:F8:62:C5:8D:C4
+    String computerAddress = "28:CD:C4:10:46:CC"; //"00:C2:C6:C4:71:C3" //3C:F8:62:C5:8D:C4 //28:CD:C4:10:46:CC //3C:F8:62:C5:8D:C4
     final String stringUUID = "39675b0d-6dd8-4622-847f-3e5acc607e27"; //UUID of application DO NOT CHANGE
     UUID ConnectToUUID = UUID.fromString(stringUUID);
 

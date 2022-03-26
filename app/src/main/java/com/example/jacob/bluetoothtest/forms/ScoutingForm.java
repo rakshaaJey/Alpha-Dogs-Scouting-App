@@ -47,6 +47,8 @@ public class ScoutingForm {
 
     public int rungLevel = 0;
 
+    public int foulCounter;
+
     public Constants.Climb climb = Constants.Climb.NONE;
 
     private boolean m_finalized = false;
@@ -96,7 +98,8 @@ public class ScoutingForm {
                 + defenceTime + ","
                 + defendedTeams + ","
                 + climbTime + ","
-                + rungLevel;
+                + rungLevel + ","
+                + foulCounter;
     }
 
     public static ScoutingForm fromString(String s) {
@@ -125,6 +128,7 @@ public class ScoutingForm {
         ret.defendedTeams = arr[17];
         ret.climbTime = Double.parseDouble(arr[18]);
         ret.climb = Constants.Climb.fromString(arr[19]);
+        ret.foulCounter =  Integer.parseInt(arr[20]);
 
         ret.matchStarted = true;
         ret.matchOver = true;

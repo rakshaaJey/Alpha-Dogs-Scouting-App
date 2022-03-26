@@ -36,10 +36,40 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="10"
-                android:text=""
                 android:hint="team number"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/foulCount"
+                android:layout_width="51dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fouls:" />
+
+            <EditText
+                android:id="@+id/foulCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="rung level"
+                android:inputType="number"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/addFoul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+" />
         </LinearLayout>
 
     </LinearLayout>

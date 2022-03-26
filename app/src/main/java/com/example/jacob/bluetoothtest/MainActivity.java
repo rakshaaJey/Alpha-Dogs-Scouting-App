@@ -147,7 +147,9 @@ public class MainActivity extends AppCompatActivity {
                     if (m_currentForm.team == Constants.Team.BLUE) {
                         if(m_currentForm.currentMode == Constants.GameMode.ENDGAME ){
                             showClimbAlert();
-                        } else {
+                        } else if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
+                            showDefenceAlert();
+                        } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                             showProtectedZoneAlert();
                         }
                     }
@@ -162,7 +164,9 @@ public class MainActivity extends AppCompatActivity {
                     if (m_currentForm.team == Constants.Team.RED) {
                         if(m_currentForm.currentMode == Constants.GameMode.ENDGAME ){
                                 showClimbAlert();
-                        } else {
+                        }  else if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
+                            showDefenceAlert();
+                        } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                             showProtectedZoneAlert();
                         }
                     }
@@ -174,9 +178,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -187,9 +191,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -200,9 +204,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -213,9 +217,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -226,9 +230,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -239,9 +243,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -252,9 +256,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -265,9 +269,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -278,9 +282,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -291,9 +295,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    }  else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showFarAlert();
                     }
                 }
@@ -304,9 +308,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showTarMacAlert();
                     }
                 }
@@ -317,9 +321,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showTarMacAlert();
                     }
                 }
@@ -330,9 +334,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showTarMacAlert();
                     }
                 }
@@ -343,9 +347,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showTarMacAlert();
                     }
                 }
@@ -356,9 +360,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                    if(Constants.DefenceType.DEFENDING ==m_currentForm.currentDefenceType){
                         showDefenceAlert();
-                    } else {
+                    } else if(Constants.GameAction.OFFENCE == m_currentForm.currentAction) {
                         showCloseAlert();
                     }
                 }
@@ -1002,12 +1006,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        try {
-             m_currentForm.rungLevel = Integer.parseInt(rungLevel.getText().toString());
-        } catch (NumberFormatException e) {
-
-        }
-
         if (m_currentForm.climbPeriod.started() && !m_currentForm.climbPeriod.ended()) {
             //Started
             start.setText("Restart Climb");
@@ -1077,6 +1075,11 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.affirm, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                try {
+                    m_currentForm.rungLevel = Integer.parseInt(rungLevel.getText().toString());
+                } catch (NumberFormatException e) {
+
+                }
                 dialogInterface.cancel();
             }
         });
@@ -1098,13 +1101,34 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText defendedTeam = layout.findViewById(R.id.defendedAgainst);
 
+        final Button addFoul = layout.findViewById(R.id.addFoul);
+
+        final EditText foulCounter = layout.findViewById(R.id.foulCounter);
+
+        foulCounter.setText("" + (m_currentForm.foulCounter));
+
+        addFoul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    foulCounter.setText("" + (Integer.parseInt(foulCounter.getText().toString()) + 1));
+                } catch (NumberFormatException e) {
+
+                }
+            }
+        });
+
         builder.setView(layout);
 
         builder.setPositiveButton(R.string.affirm, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                EditText foulCounter = ((AlertDialog) dialogInterface).findViewById(R.id.foulCounter);
                 try {
-                    m_currentForm.defendedTeams += defendedTeam.getText().toString() + "|";
+                    m_currentForm.foulCounter = Integer.parseInt(foulCounter.getText().toString());
+                    if (m_currentForm.defendedTeams.contains(defendedTeam.getText().toString()) == false){
+                        m_currentForm.defendedTeams += defendedTeam.getText().toString() + ",";
+                    }
                 } catch (NumberFormatException e) {
 
                 }
