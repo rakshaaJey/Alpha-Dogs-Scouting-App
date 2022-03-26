@@ -33,6 +33,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout m_shelfLayout, m_defenceModeLayout, m_defenceTypeLayout;
     private ToggleButton m_autoCross;
     private String m_loadName;
+    private String defendedTeamsList = "";
 
     private TextView m_teamInfo;
 
@@ -276,7 +278,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isShelfOut()) {
-                    showFarAlert();
+                    if(Constants.GameAction.DEFENCE == m_currentForm.currentAction){
+                        showDefenceAlert();
+                    } else {
+                        showFarAlert();
+                    }
                 }
             }
         });
@@ -1092,16 +1098,16 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText defendedTeam = layout.findViewById(R.id.defendedAgainst);
 
-        try {
-            m_currentForm.defendedTeams += (defendedTeam.toString() + ", ");
-        } catch (NumberFormatException e) {
-
-        }
         builder.setView(layout);
 
         builder.setPositiveButton(R.string.affirm, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                try {
+                    m_currentForm.defendedTeams += defendedTeam.getText().toString() + "|";
+                } catch (NumberFormatException e) {
+
+                }
                 dialogInterface.cancel();
             }
         });

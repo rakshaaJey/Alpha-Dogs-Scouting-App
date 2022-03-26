@@ -339,6 +339,10 @@
                 android:textColor="@color/blueTeam" />
         </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="307dp" />
+
         <Button
             android:id="@+id/toggleMatch"
             android:layout_width="match_parent"
