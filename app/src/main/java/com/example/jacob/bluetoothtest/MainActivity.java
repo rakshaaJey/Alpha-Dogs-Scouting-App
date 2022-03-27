@@ -1127,7 +1127,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     m_currentForm.foulCounter = Integer.parseInt(foulCounter.getText().toString());
                     if (m_currentForm.defendedTeams.contains(defendedTeam.getText().toString()) == false){
-                        m_currentForm.defendedTeams += defendedTeam.getText().toString() + ",";
+                        m_currentForm.defendedTeams += defendedTeam.getText().toString() + "||";
                     }
                 } catch (NumberFormatException e) {
 

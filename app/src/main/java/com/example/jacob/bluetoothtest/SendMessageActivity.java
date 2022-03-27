@@ -7,8 +7,6 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.provider.Settings;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -47,7 +45,7 @@ public class SendMessageActivity extends AppCompatActivity {
     private OutputStream outputStream; //Stream data is written to
     private InputStream inStream; //Stream data is read from, currently unused
 
-    String computerAddress = "28:CD:C4:10:46:CC"; //"00:C2:C6:C4:71:C3" //3C:F8:62:C5:8D:C4 //28:CD:C4:10:46:CC //3C:F8:62:C5:8D:C4
+    String computerAddress = "14:4F:8A:E3:49:8B"; //"00:C2:C6:C4:71:C3" //3C:F8:62:C5:8D:C4 //14:4F:8A:E3:49:8B
     final String stringUUID = "39675b0d-6dd8-4622-847f-3e5acc607e27"; //UUID of application DO NOT CHANGE
     UUID ConnectToUUID = UUID.fromString(stringUUID);
 
@@ -318,8 +316,6 @@ public class SendMessageActivity extends AppCompatActivity {
         if (mBluetoothAdapter == null) {
             /* Device doesn't support Bluetooth
             app crashes if this is true, put error handling code in here
-
-
              */
         }
 
@@ -327,16 +323,7 @@ public class SendMessageActivity extends AppCompatActivity {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT); //Enables bluetooth, gets permissions
         }
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
+
         Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
 
         if (pairedDevices.size() > 0) {
@@ -355,16 +342,6 @@ public class SendMessageActivity extends AppCompatActivity {
 
         try {
             if (!(hostComputer == null)) {
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
-                    return;
-                }
                 socket = hostComputer.createRfcommSocketToServiceRecord(ConnectToUUID);
                 socket.connect();
                 connected = true;
