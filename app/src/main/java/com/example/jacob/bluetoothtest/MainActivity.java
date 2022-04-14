@@ -637,6 +637,22 @@ public class MainActivity extends AppCompatActivity {
 
         final Button addScored = layout.findViewById(R.id.addScored);
         final Button addMissed = layout.findViewById(R.id.addMissed);
+        final Button addFoul = layout.findViewById(R.id.addFoul);
+
+        final EditText foulCounter = layout.findViewById(R.id.foulCounter);
+
+        foulCounter.setText("" + (m_currentForm.foulCounter));
+
+        addFoul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    foulCounter.setText("" + (Integer.parseInt(foulCounter.getText().toString()) + 1));
+                } catch (NumberFormatException e) {
+
+                }
+            }
+        });
 
         addScored.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -667,6 +683,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 EditText scored = ((AlertDialog) dialogInterface).findViewById(R.id.scored);
                 EditText missed = ((AlertDialog) dialogInterface).findViewById(R.id.missed);
+                EditText fouls = ((AlertDialog) dialogInterface).findViewById(R.id.foulCounter);
 
                 try {
                     if (m_currentForm.currentMode == Constants.GameMode.AUTO) {
@@ -675,6 +692,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         m_currentForm.farBalls = Integer.parseInt(scored.getText().toString());
                         m_currentForm.farBallsShot = Integer.parseInt(scored.getText().toString()) + Integer.parseInt(missed.getText().toString());
+                        m_currentForm.foulCounter = Integer.parseInt(fouls.getText().toString());
                     }
                 } catch (NumberFormatException e) {
 
@@ -788,6 +806,23 @@ public class MainActivity extends AppCompatActivity {
         final Button addScored = layout.findViewById(R.id.addScored);
         final Button addMissed = layout.findViewById(R.id.addMissed);
 
+        final Button addFoul = layout.findViewById(R.id.addFoul);
+
+        final EditText foulCounter = layout.findViewById(R.id.foulCounter);
+
+        foulCounter.setText("" + (m_currentForm.foulCounter));
+
+        addFoul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    foulCounter.setText("" + (Integer.parseInt(foulCounter.getText().toString()) + 1));
+                } catch (NumberFormatException e) {
+
+                }
+            }
+        });
+
         addScored.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -817,6 +852,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 EditText scored = ((AlertDialog) dialogInterface).findViewById(R.id.scored);
                 EditText missed = ((AlertDialog) dialogInterface).findViewById(R.id.missed);
+                EditText fouls = ((AlertDialog) dialogInterface).findViewById(R.id.foulCounter);
 
                 try {
                     if (m_currentForm.currentMode == Constants.GameMode.AUTO) {
@@ -826,6 +862,7 @@ public class MainActivity extends AppCompatActivity {
                         m_currentForm.protectedZoneBalls = Integer.parseInt(scored.getText().toString());
                         m_currentForm.protectedZoneBallsShot = Integer.parseInt(scored.getText().toString()) + Integer.parseInt(missed.getText().toString());
                     }
+                    m_currentForm.foulCounter = Integer.parseInt(fouls.getText().toString());
                 } catch (NumberFormatException e) {
 
                 }
@@ -857,6 +894,22 @@ public class MainActivity extends AppCompatActivity {
 
         final Button addScored = layout.findViewById(R.id.addScored);
         final Button addMissed = layout.findViewById(R.id.addMissed);
+        final Button addFoul = layout.findViewById(R.id.addFoul);
+
+        final EditText foulCounter = layout.findViewById(R.id.foulCounter);
+
+        foulCounter.setText("" + (m_currentForm.foulCounter));
+
+        addFoul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    foulCounter.setText("" + (Integer.parseInt(foulCounter.getText().toString()) + 1));
+                } catch (NumberFormatException e) {
+
+                }
+            }
+        });
 
         addScored.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -887,6 +940,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 EditText scored = ((AlertDialog) dialogInterface).findViewById(R.id.scored);
                 EditText missed = ((AlertDialog) dialogInterface).findViewById(R.id.missed);
+                EditText fouls = ((AlertDialog) dialogInterface).findViewById(R.id.foulCounter);
 
                 try {
                     if (m_currentForm.currentMode == Constants.GameMode.AUTO) {
@@ -896,6 +950,7 @@ public class MainActivity extends AppCompatActivity {
                         m_currentForm.tarMacBalls = Integer.parseInt(scored.getText().toString());
                         m_currentForm.tarMacBallsShot = Integer.parseInt(scored.getText().toString()) + Integer.parseInt(missed.getText().toString());
                     }
+                    m_currentForm.foulCounter = Integer.parseInt(fouls.getText().toString());
                 } catch (NumberFormatException e) {
 
                 }
@@ -913,37 +968,82 @@ public class MainActivity extends AppCompatActivity {
 
         LayoutInflater inflater = getLayoutInflater();
 
-        View layout = inflater.inflate(R.layout.dialog_target, null);
+        View layout = inflater.inflate(R.layout.dialog_target_two, null);
 
         //setup
 
         ((TextView) layout.findViewById(R.id.targetTitle)).setText(m_currentForm.currentMode == Constants.GameMode.AUTO ? "Auto Shots" : "Close Shots");
 
-        final EditText scored = layout.findViewById(R.id.scored);
-        final EditText missed = layout.findViewById(R.id.missed);
+        final EditText scoredHigh = layout.findViewById(R.id.scoredHigh);
+        final EditText missedHigh = layout.findViewById(R.id.missedHigh);
+        final EditText scoredLow = layout.findViewById(R.id.scoredLow);
+        final EditText missedLow = layout.findViewById(R.id.missedLow);
 
-        scored.setText("" + (m_currentForm.currentMode == Constants.GameMode.AUTO ? m_currentForm.autoBalls : m_currentForm.closeBalls));
-        missed.setText("" + (m_currentForm.currentMode == Constants.GameMode.AUTO ? m_currentForm.autoBallsShot - m_currentForm.autoBalls : m_currentForm.closeBallsShot - m_currentForm.closeBalls));
+        scoredHigh.setText("" + (m_currentForm.currentMode == Constants.GameMode.AUTO ? m_currentForm.autoBalls : m_currentForm.highCloseBalls));
+        missedHigh.setText("" + (m_currentForm.currentMode == Constants.GameMode.AUTO ? m_currentForm.autoBallsShot - m_currentForm.autoBalls : m_currentForm.highCloseBallsShot - m_currentForm.highCloseBalls));
+        scoredLow.setText("" + (m_currentForm.currentMode == Constants.GameMode.AUTO ? m_currentForm.autoBalls : m_currentForm.lowCloseBalls));
+        missedLow.setText("" + (m_currentForm.currentMode == Constants.GameMode.AUTO ? m_currentForm.autoBallsShot - m_currentForm.autoBalls : m_currentForm.lowCloseBallsShot - m_currentForm.lowCloseBalls));
 
-        final Button addScored = layout.findViewById(R.id.addScored);
-        final Button addMissed = layout.findViewById(R.id.addMissed);
 
-        addScored.setOnClickListener(new View.OnClickListener() {
+        final Button addScoredHigh = layout.findViewById(R.id.addScoredHigh);
+        final Button addMissedHigh = layout.findViewById(R.id.addMissedHigh);
+        final Button addScoredLow = layout.findViewById(R.id.addScoredLow);
+        final Button addMissedLow = layout.findViewById(R.id.addMissedLow);
+        final Button addFoul = layout.findViewById(R.id.addFoul);
+
+        final EditText foulCounter = layout.findViewById(R.id.foulCounter);
+
+        foulCounter.setText("" + (m_currentForm.foulCounter));
+
+        addFoul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    scored.setText("" + (Integer.parseInt(scored.getText().toString()) + 1));
+                    foulCounter.setText("" + (Integer.parseInt(foulCounter.getText().toString()) + 1));
                 } catch (NumberFormatException e) {
 
                 }
             }
         });
 
-        addMissed.setOnClickListener(new View.OnClickListener() {
+        addScoredHigh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    missed.setText("" + (Integer.parseInt(missed.getText().toString()) + 1));
+                    scoredHigh.setText("" + (Integer.parseInt(scoredHigh.getText().toString()) + 1));
+                } catch (NumberFormatException e) {
+
+                }
+            }
+        });
+
+        addMissedHigh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    missedHigh.setText("" + (Integer.parseInt(missedHigh.getText().toString()) + 1));
+                } catch (NumberFormatException e) {
+
+                }
+            }
+        });
+
+        addScoredLow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    scoredLow.setText("" + (Integer.parseInt(scoredLow.getText().toString()) + 1));
+                } catch (NumberFormatException e) {
+
+                }
+            }
+        });
+
+        addMissedLow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    missedLow.setText("" + (Integer.parseInt(missedLow.getText().toString()) + 1));
                 } catch (NumberFormatException e) {
 
                 }
@@ -955,17 +1055,23 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.affirm, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                EditText scored = ((AlertDialog) dialogInterface).findViewById(R.id.scored);
-                EditText missed = ((AlertDialog) dialogInterface).findViewById(R.id.missed);
+                EditText scoredHigh = ((AlertDialog) dialogInterface).findViewById(R.id.scoredHigh);
+                EditText missedHigh = ((AlertDialog) dialogInterface).findViewById(R.id.missedHigh);
+                EditText scoredLow = ((AlertDialog) dialogInterface).findViewById(R.id.scoredLow);
+                EditText missedLow = ((AlertDialog) dialogInterface).findViewById(R.id.missedLow);
+                EditText fouls = ((AlertDialog) dialogInterface).findViewById(R.id.foulCounter);
 
                 try {
                     if (m_currentForm.currentMode == Constants.GameMode.AUTO) {
-                        m_currentForm.autoBalls = Integer.parseInt(scored.getText().toString());
-                        m_currentForm.autoBallsShot = Integer.parseInt(scored.getText().toString()) + Integer.parseInt(missed.getText().toString());
+                        m_currentForm.autoBalls = Integer.parseInt(scoredHigh.getText().toString()) + Integer.parseInt(scoredLow.getText().toString()) ;
+                        m_currentForm.autoBallsShot = Integer.parseInt(scoredHigh.getText().toString()) + Integer.parseInt(missedHigh.getText().toString()) + Integer.parseInt(scoredLow.getText().toString()) + Integer.parseInt(missedLow.getText().toString());
                     } else {
-                        m_currentForm.closeBalls = Integer.parseInt(scored.getText().toString());
-                        m_currentForm.closeBallsShot = Integer.parseInt(scored.getText().toString()) + Integer.parseInt(missed.getText().toString());
+                        m_currentForm.lowCloseBalls = Integer.parseInt(scoredLow.getText().toString());
+                        m_currentForm.lowCloseBallsShot = Integer.parseInt(scoredLow.getText().toString()) + Integer.parseInt(missedLow.getText().toString());
+                        m_currentForm.highCloseBalls = Integer.parseInt(scoredHigh.getText().toString());
+                        m_currentForm.highCloseBallsShot = Integer.parseInt(missedHigh.getText().toString()) + Integer.parseInt(scoredHigh.getText().toString());
                     }
+                    m_currentForm.foulCounter = Integer.parseInt(fouls.getText().toString());
                 } catch (NumberFormatException e) {
 
                 }

@@ -37,8 +37,10 @@ public class ScoutingForm {
     public int farBallsShot = 0;
     public int tarMacBalls = 0;
     public int tarMacBallsShot = 0;
-    public int closeBalls = 0;
-    public int closeBallsShot = 0;
+    public int lowCloseBalls = 0;
+    public int lowCloseBallsShot = 0;
+    public int highCloseBalls = 0;
+    public int highCloseBallsShot = 0;
     public int protectedZoneBalls= 0;
     public int protectedZoneBallsShot = 0;
 
@@ -90,8 +92,8 @@ public class ScoutingForm {
                 + farBallsShot + ","
                 + tarMacBalls + ","
                 + tarMacBallsShot + ","
-                + closeBalls + ","
-                + closeBallsShot + ","
+                + lowCloseBalls + ","
+                + lowCloseBallsShot + ","
                 + protectedZoneBalls + ","
                 + protectedZoneBallsShot + ","
                 + activeDefenceTime + ","
@@ -99,7 +101,9 @@ public class ScoutingForm {
                 + defendedTeams + ","
                 + climbTime + ","
                 + rungLevel + ","
-                + foulCounter;
+                + foulCounter + ","
+                + highCloseBalls + ","
+                + highCloseBallsShot;
     }
 
     public static ScoutingForm fromString(String s) {
@@ -119,8 +123,8 @@ public class ScoutingForm {
         ret.farBallsShot = Integer.parseInt(arr[8]);
         ret.tarMacBalls = Integer.parseInt(arr[9]);
         ret.tarMacBallsShot = Integer.parseInt(arr[10]);
-        ret.closeBalls = Integer.parseInt(arr[11]);
-        ret.closeBallsShot = Integer.parseInt(arr[12]);
+        ret.lowCloseBalls = Integer.parseInt(arr[11]);
+        ret.lowCloseBallsShot = Integer.parseInt(arr[12]);
         ret.protectedZoneBalls = Integer.parseInt(arr[13]);
         ret.protectedZoneBallsShot = Integer.parseInt(arr[14]);
         ret.activeDefenceTime = Double.parseDouble(arr[15]);
@@ -129,6 +133,8 @@ public class ScoutingForm {
         ret.climbTime = Double.parseDouble(arr[18]);
         ret.climb = Constants.Climb.fromString(arr[19]);
         ret.foulCounter =  Integer.parseInt(arr[20]);
+        ret.highCloseBalls = Integer.parseInt(arr[21]);
+        ret.highCloseBallsShot = Integer.parseInt(arr[22]);
 
         ret.matchStarted = true;
         ret.matchOver = true;

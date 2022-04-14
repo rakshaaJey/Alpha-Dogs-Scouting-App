@@ -18,23 +18,23 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/scoredTitle"
+            android:id="@+id/lowScoredTitle"
             android:layout_width="51dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Scored:" />
+            android:text="Scored low:" />
 
         <EditText
-            android:id="@+id/scored"
+            android:id="@+id/scoredLow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Scored"
+            android:hint="Scored in low goal"
             android:inputType="number" />
 
         <Button
-            android:id="@+id/addScored"
+            android:id="@+id/addScoredLow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+" />
@@ -46,25 +46,83 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/missedTitle"
+            android:id="@+id/lowMissedTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Missed:" />
+            android:text="Missed low:" />
 
         <EditText
-            android:id="@+id/missed"
+            android:id="@+id/missedLow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Missed"
+            android:hint="Missed in low goal"
             android:inputType="number" />
 
         <Button
-            android:id="@+id/addMissed"
+            android:id="@+id/addMissedLow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/highScoredTitle"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Scored high:" />
+
+        <EditText
+            android:id="@+id/scoredHigh"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Scored in high goal"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/addScoredHigh"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/highMissedTitle"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Missed high:" />
+
+        <EditText
+            android:id="@+id/missedHigh"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Missed in high goal"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/addMissedHigh"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="+" />
     </LinearLayout>
 
