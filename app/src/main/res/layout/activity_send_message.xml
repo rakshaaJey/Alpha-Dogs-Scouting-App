@@ -28,12 +28,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="223dp"
+            android:layout_height="226dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/ActivityMessage"
-                android:layout_width="598dp"
+                android:layout_width="368dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="30dp"
@@ -52,7 +52,7 @@
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="401dp"
+                android:layout_width="255dp"
                 android:layout_height="match_parent" />
 
             <LinearLayout
@@ -103,11 +103,11 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="62dp" />
+            android:layout_height="21dp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="140dp" />
+            android:layout_height="14dp" />
 
         <TextView
             android:id="@+id/EsablishingConnection"
